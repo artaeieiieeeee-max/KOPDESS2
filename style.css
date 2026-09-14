@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #071b12;
+  color: white;
+}
+
+canvas {
+  display: block;
+}
+
+.screen {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 40, 20, 0.82),
+      rgba(0, 0, 0, 0.9)
+    );
+}
+
+.hidden {
+  display: none !important;
+}
+
+.card {
+  width: min(90%, 400px);
+  padding: 30px;
+
+  border-radius: 25px;
+
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 42px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #9affbd;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+
+  margin: 8px 0;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 12px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #20c66b;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.secondary {
+  background: rgba(255,255,255,0.15);
+}
+
+.info {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #bbb;
+}
+
+#topUI {
+  position: fixed;
+  z-index: 10;
+
+  top: 15px;
+  left: 15px;
+  right: 15px;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 12px 18px;
+
+  border-radius: 15px;
+
+  background: rgba(0,0,0,0.5);
+
+  backdrop-filter: blur(8px);
+
+  font-weight: bold;
+}
+
+#message {
+  position: fixed;
+
+  top: 80px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 18px;
+  font-weight: bold;
+
+  pointer-events: none;
+}
+
+#mobileControls {
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 20px;
+
+  display: none;
+
+  text-align: center;
+}
+
+#mobileControls button {
+  width: 55px;
+  height: 55px;
+
+  padding: 0;
+  margin: 3px;
+
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.6);
+}
+
+.leaderboard-card {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.rank {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 12px;
+
+  margin: 7px 0;
+
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.1);
+}
+
+@media (max-width: 700px) {
+
+  #mobileControls {
+    display: block;
+  }
+
+  .card h1 {
+    font-size: 34px;
+  }
+
+}
