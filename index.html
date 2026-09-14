@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOPDES 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU UTAMA -->
+  <div id="menu" class="screen">
+    <div class="card">
+      <h1>🏪 KOPDES</h1>
+      <p class="subtitle">Koperasi Desa 3D</p>
+
+      <input id="username" type="text" placeholder="Masukkan Username">
+      <input id="wa" type="tel" placeholder="Nomor WhatsApp">
+
+      <button id="startBtn">🎮 MULAI GAME</button>
+      <button id="leaderboardBtn" class="secondary">🏆 LEADERBOARD</button>
+
+      <p class="info">Kumpulkan koin sebanyak mungkin sebelum waktu habis!</p>
+    </div>
+  </div>
+
+  <!-- LEADERBOARD -->
+  <div id="leaderboard" class="screen hidden">
+    <div class="card leaderboard-card">
+      <h1>🏆 LEADERBOARD</h1>
+
+      <div id="leaderboardList">
+        Memuat data...
+      </div>
+
+      <button id="backBtn" class="secondary">⬅ KEMBALI</button>
+    </div>
+  </div>
+
+  <!-- GAME -->
+  <div id="gameUI" class="hidden">
+
+    <div id="topUI">
+      <div>👤 <span id="playerName">Player</span></div>
+      <div>⭐ <span id="score">0</span></div>
+      <div>⏱️ <span id="timer">60</span></div>
+    </div>
+
+    <div id="message"></div>
+
+    <!-- Kontrol HP -->
+    <div id="mobileControls">
+      <button id="up">▲</button>
+
+      <div>
+        <button id="left">◀</button>
+        <button id="down">▼</button>
+        <button id="right">▶</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HASIL GAME -->
+  <div id="gameOver" class="screen hidden">
+    <div class="card">
+      <h1>🎉 GAME SELESAI!</h1>
+
+      <p>Username</p>
+      <h2 id="finalName">Player</h2>
+
+      <p>Score Kamu</p>
+      <h1 id="finalScore">0</h1>
+
+      <button id="againBtn">🔄 MAIN LAGI</button>
+      <button id="resultLeaderboard" class="secondary">
+        🏆 LEADERBOARD
+      </button>
+    </div>
+  </div>
+
+  <!-- THREE.JS -->
+  <script type="module" src="game.js"></script>
+
+</body>
+</html>
